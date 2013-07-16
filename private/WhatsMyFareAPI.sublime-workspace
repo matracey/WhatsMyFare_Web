@@ -1,0 +1,849 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"search",
+				"array_search"
+			],
+			[
+				"result",
+				"resultSet"
+			],
+			[
+				"base",
+				"base_convert"
+			],
+			[
+				"api",
+				"apiKey"
+			],
+			[
+				"base_c",
+				"base64_encode"
+			],
+			[
+				"true",
+				"true"
+			],
+			[
+				"func",
+				"function"
+			],
+			[
+				"activ",
+				"activeOnly"
+			],
+			[
+				"from",
+				"from"
+			],
+			[
+				"ac",
+				"activeOnly"
+			],
+			[
+				"var",
+				"var_dump"
+			],
+			[
+				"query",
+				"query"
+			],
+			[
+				"met",
+				"meta_tags"
+			],
+			[
+				"stop",
+				"stop_type"
+			],
+			[
+				"getAllStop",
+				"getAllStopsForService"
+			],
+			[
+				"NO",
+				"NO_CONTENT"
+			],
+			[
+				"act",
+				"active"
+			],
+			[
+				"acti",
+				"activeOnly"
+			],
+			[
+				"pass",
+				"password"
+			],
+			[
+				"email",
+				"email_address"
+			],
+			[
+				"check",
+				"checkMethod"
+			],
+			[
+				"for",
+				"foreach	foreach …"
+			],
+			[
+				"NOT",
+				"NOT_ACCEPTABLE"
+			],
+			[
+				"BAD",
+				"BAD_REQUEST"
+			],
+			[
+				"get_requ",
+				"get_request_method"
+			],
+			[
+				"_",
+				"_GET"
+			],
+			[
+				"star",
+				"startIndex"
+			],
+			[
+				"RE",
+				"REQUEST_FILENAME"
+			],
+			[
+				"_r",
+				"_REQUEST"
+			],
+			[
+				"json_",
+				"json_encode"
+			],
+			[
+				"funct",
+				"functionCalled"
+			],
+			[
+				"function",
+				"functionCalled"
+			],
+			[
+				"DB_",
+				"DB_SCNAME"
+			],
+			[
+				"padd",
+				"padding-top"
+			],
+			[
+				"marg",
+				"margin-top"
+			],
+			[
+				"ma",
+				"margin-top"
+			],
+			[
+				"mar",
+				"margin"
+			],
+			[
+				"font",
+				"font-family"
+			],
+			[
+				"font-",
+				"font-weight"
+			],
+			[
+				"getDispl",
+				"getDisplayedPoints"
+			],
+			[
+				"getDispla",
+				"getDisplayedBracket"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"displayedBr",
+				"displayedBracketName"
+			],
+			[
+				"displa",
+				"displayedServiceName"
+			],
+			[
+				"displayed",
+				"displayedServiceImg"
+			],
+			[
+				"bra",
+				"bracket"
+			],
+			[
+				"brac",
+				"brackets"
+			],
+			[
+				"displ",
+				"displayedBracketName"
+			],
+			[
+				"ser",
+				"service"
+			],
+			[
+				"displayedSer",
+				"displayedServiceName"
+			],
+			[
+				"bord",
+				"border-right"
+			],
+			[
+				"bor",
+				"border-left"
+			],
+			[
+				"tabl",
+				"table-cell"
+			],
+			[
+				"pad",
+				"padding"
+			],
+			[
+				"margin",
+				"margin"
+			],
+			[
+				"pa",
+				"padding"
+			],
+			[
+				"border-r",
+				"border-radius"
+			],
+			[
+				"margi",
+				"margin"
+			],
+			[
+				"tex",
+				"text-align"
+			],
+			[
+				"content",
+				"contentDiv"
+			],
+			[
+				"cont",
+				"contentDiv"
+			],
+			[
+				"fo",
+				"for	for …"
+			],
+			[
+				"colo",
+				"contentColour"
+			],
+			[
+				"conte",
+				"contentColour"
+			],
+			[
+				"foot",
+				"footColour"
+			],
+			[
+				"fon",
+				"fonts"
+			],
+			[
+				"conten",
+				"contentBackground"
+			],
+			[
+				"head",
+				"headBackground"
+			],
+			[
+				"su",
+				"submitBtn"
+			],
+			[
+				"mag",
+				"margin-left"
+			],
+			[
+				"strip",
+				"stripslashes"
+			],
+			[
+				"new",
+				"new_enough_php_vers"
+			],
+			[
+				"err",
+				"error"
+			],
+			[
+				"con",
+				"connection"
+			],
+			[
+				"mysql_num",
+				"mysql_num_rows"
+			],
+			[
+				"item",
+				"item"
+			],
+			[
+				"res",
+				"result_set"
+			],
+			[
+				"exe",
+				"execute_query"
+			],
+			[
+				"mysql_con",
+				"mysqli_connect"
+			],
+			[
+				"arr",
+				"array	$… = array (…)"
+			],
+			[
+				"to",
+				"todo_items"
+			],
+			[
+				"pos",
+				"_POST"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"p",
+				"pageTitle"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"ema",
+				"email"
+			],
+			[
+				"ex",
+				"exit"
+			],
+			[
+				"list",
+				"listViewHTML"
+			],
+			[
+				"pro",
+				"products"
+			],
+			[
+				"op",
+				"option	Tag"
+			],
+			[
+				"inc",
+				"includes"
+			],
+			[
+				"proc",
+				"product"
+			],
+			[
+				"include",
+				"includes"
+			],
+			[
+				"img",
+				"img_path"
+			],
+			[
+				"al",
+				"alt	Attr"
+			],
+			[
+				"shirt",
+				"shirt-103"
+			],
+			[
+				"includ",
+				"include"
+			],
+			[
+				"em",
+				"email_body"
+			],
+			[
+				"date_def",
+				"date_default_timezone_set"
+			],
+			[
+				"sel",
+				"selSubject"
+			],
+			[
+				"glo",
+				"global"
+			],
+			[
+				"url",
+				"urlencode"
+			],
+			[
+				"subjec",
+				"subject_id"
+			],
+			[
+				"page",
+				"page_count"
+			],
+			[
+				"sub",
+				"subject_set"
+			],
+			[
+				"o",
+				"old_pos"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "api.php",
+			"settings":
+			{
+				"buffer_size": 25992,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Rest.inc.php",
+			"settings":
+			{
+				"buffer_size": 3414,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "http_codes.php",
+			"settings":
+			{
+				"buffer_size": 176,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": ".htaccess",
+			"settings":
+			{
+				"buffer_size": 873,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 87.0,
+		"selected_items":
+		[
+			[
+				"packag",
+				"Preferences: Browse Packages"
+			],
+			[
+				"packa",
+				"Preferences: Package Control Settings – Default"
+			],
+			[
+				"Package",
+				"Preferences: Browse Packages"
+			]
+		],
+		"width": 449.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/martintracey/Sites/whats_my_fare/api/.htaccess.txt",
+		"/Users/martintracey/Sites/whats_my_fare/api/http_codes.php",
+		"/Users/martintracey/Sites/whats_my_fare/api/api.php",
+		"/Users/martintracey/Sites/whats_my_fare/.htaccess",
+		"/Users/martintracey/Sites/whats_my_fare/api/Rest.inc.php",
+		"/private/etc/apache2/httpd.conf",
+		"/Users/martintracey/Sites/api_test/index.php",
+		"/private/etc/apache2/users/martintracey.conf",
+		"/Users/martintracey/Sites/api_test/.htaccess.txt",
+		"/Users/martintracey/Library/Application Support/Sublime Text 3/Packages/Package Control/Package Control.sublime-settings",
+		"/Users/martintracey/Downloads/rest/Rest.inc.php",
+		"/Users/martintracey/Dropbox/College/Box Documents/Software Project/whats_my_fare_db+luasprices_new.csv",
+		"/Users/martintracey/Dropbox/College/Box Documents/Software Project/whats_my_fare_db+railprices_new.csv",
+		"/Users/martintracey/Sites/aws_bootcamp/inc/header.php",
+		"/Users/martintracey/Sites/aws_bootcamp/inc/footer.php",
+		"/Users/martintracey/Sites/aws_bootcamp/inc/ToDoItem.php",
+		"/Users/martintracey/Sites/aws_bootcamp/inc/db_functions.php",
+		"/Users/martintracey/Sites/aws_bootcamp/style.php",
+		"/Users/martintracey/Sites/aws_bootcamp/script.js",
+		"/Users/martintracey/Sites/aws_bootcamp/index.php",
+		"/Users/martintracey/Library/Application Support/Sublime Text 3/Packages/User/PHP.sublime-settings",
+		"/Users/martintracey/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/Users/martintracey/Sites/treehouse/stripetest.html",
+		"/Users/martintracey/Sites/treehouse/contact-thanks.php",
+		"/Users/martintracey/Sites/treehouse/contact-process.php",
+		"/Users/martintracey/Sites/treehouse/island01-stage04-products-array.txt",
+		"/Users/martintracey/Sites/treehouse/index.html.old",
+		"/Users/martintracey/Sites/widget_corp/edit_subject.php",
+		"/Users/martintracey/Sites/widget_corp/includes/form_functions.php",
+		"/Users/martintracey/Sites/widget_corp/includes/functions.php",
+		"/Users/martintracey/Sites/widget_corp/create_page.php",
+		"/Users/martintracey/Sites/widget_corp/create_subject.php",
+		"/Users/martintracey/Sites/widget_corp/delete_page.php",
+		"/Users/martintracey/Sites/widget_corp/delete_subject.php",
+		"/Users/martintracey/Sites/widget_corp/new_page.php",
+		"/Users/martintracey/Sites/widget_corp/edit_page.php",
+		"/Users/martintracey/Sites/widget_corp/new_subject.php"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"Fares",
+			"getAll",
+			"Adult",
+			"createNew",
+			"active",
+			"activateUser",
+			"_POST",
+			"$id = ",
+			"$id",
+			"deleteOnly",
+			"is_active",
+			"ServerName",
+			"AllowOverride",
+			"this->",
+			"repsonse",
+			",0,",
+			"\"\"",
+			"\"\"\"",
+			",\"),\"",
+			",\"(\"",
+			",\"),\"",
+			"\"\"",
+			"\"\"\"",
+			",\"",
+			"),\"",
+			",\"(\"",
+			"\"\"",
+			"\"\"\"",
+			"`",
+			",\n",
+			"`standard_prices`.",
+			"euro",
+			"images//",
+			"$services",
+			"'red'",
+			"private",
+			"public",
+			"php",
+			"public",
+			"defaultOriginTitle",
+			"originTextField",
+			"defaultTitle",
+			"textField",
+			"service_selection_wrapper",
+			"service_selector",
+			"bracket_selector",
+			"luas",
+			"service",
+			"selection_wrapper",
+			"luas",
+			"this.title",
+			"mysql",
+			"mysqli",
+			"mysql",
+			"echo",
+			"page_count",
+			"page_set",
+			"selPage",
+			"subject_count",
+			"page_set",
+			"page_count",
+			"page_set",
+			"[",
+			"count"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			",",
+			"\"",
+			"),",
+			"(\"",
+			"),",
+			"\"",
+			",",
+			"",
+			"),",
+			"(\"",
+			"\"",
+			"",
+			"	",
+			"",
+			"selection_wrapper"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": false
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "api.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 25992,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3107,
+								3107
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "Rest.inc.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3414,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1207,
+								1210
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 268.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "http_codes.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 176,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								121,
+								121
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": ".htaccess",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 873,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Apache.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"project": "WhatsMyFareAPI.sublime-project",
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 47.0,
+		"selected_items":
+		[
+			[
+				"service_selector",
+				"service_selector"
+			]
+		],
+		"width": 392.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

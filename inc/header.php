@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>What's My Fare</title>
+	<link rel="stylesheet" type="text/css" href="style/style.css" />
+	<?php if(isset($pageID) and $pageID === 'result'){ ?>
+	<script type="text/javascript">
+	var cashSingle = <?php echo $result->cashSingleFare; ?>;
+	var leapSingle = <?php echo $result->leapSingleFare; ?>;
+	var cashReturn = <?php echo $result->cashReturnFare; ?>;
+	var leapReturn = <?php echo $result->leapReturnFare; ?>;
+	</script>
+	<?php } ?>
+	<script type="text/javascript" src="js/jquery-2.0.2.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
+</head>
+<body>
+<div class="header_wrapper">
+	<a href="./" class="homeLink">
+	<div class="header">
+		<h1>What's My Fare</h1>
+		<p class="subtitle">A public transport fare calculator for Dublin.</p>
+	</div>
+	</a>
+</div>
