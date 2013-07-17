@@ -50,6 +50,8 @@ class resultSet
 	public $leapSingleFare;
 	public $cashReturnFare;
 	public $leapReturnFare;
+	
+	private $urlBody = "http://whats-my-fare-ie.elasticbeanstalk.com/private/api/MzM5ODM2MzI=/";
 
 	// Initialiser
 	public function __construct($stopFrom, $stopTo, $service, $bracket)
@@ -92,7 +94,7 @@ class resultSet
 
 	private function getValuesForQuery($query)
 	{
-		$url = 'localhost/~martintracey/whats_my_fare/private/api/MzM5ODM2MzI=/' . "getStopForService/name/". urlencode($query). "/type_id/". $this->selectedServicesEnum[$this->service];
+		$url = $this->urlBody . "getStopForService/name/". urlencode($query). "/type_id/". $this->selectedServicesEnum[$this->service];
 		$handle = curl_init();
 		curl_setopt_array($handle, 
 			array(
@@ -139,7 +141,7 @@ class resultSet
 		$originID = urlencode($this->origin['id']);
 		$destinID = urlencode($this->destination['id']);
 
-		$url = 'localhost/~martintracey/whats_my_fare/private/api/MzM5ODM2MzI=/' . "getFareForStops/from/" . $originID . "/to/" . $destinID;
+		$url = $this->urlBody . "getFareForStops/from/" . $originID . "/to/" . $destinID;
 		$handle = curl_init();
 		curl_setopt_array($handle, 
 			array(
@@ -166,7 +168,7 @@ class resultSet
 		{
 			return false;
 		}
-		$url = 'localhost/~martintracey/whats_my_fare/private/api/MzM5ODM2MzI=/' . "getActivePriceForCode/code/". urlencode($this->priceCode);
+		$url = $this->urlBody . "getActivePriceForCode/code/". urlencode($this->priceCode);
 		$handle = curl_init();
 		curl_setopt_array($handle, 
 			array(
