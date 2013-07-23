@@ -1,4 +1,22 @@
 <?php
+
+$urlBody = "http://whats-my-fare-ie.elasticbeanstalk.com/private/api/MzM5ODM2MzI=/";
+$url = $urlBody . "addConnectionLog";
+$fields = array('ip' => $_SERVER['REMOTE_ADDR']);
+foreach($fields as $key=>$value) { $fields_string .= $key.'='.$value.'&'; }
+rtrim($fields_string, '&');
+
+// Old SERVER SIDE code that recorded the IP in the database.
+// $ch = curl_init();
+
+// curl_setopt($ch,CURLOPT_URL, $url);
+// curl_setopt($ch,CURLOPT_POST, count($fields));
+// curl_setopt($ch,CURLOPT_POSTFIELDS, $fields_string);
+// curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+
+// $connectionlog_result = curl_exec($ch);
+// curl_close($ch);
+
 // Uncomment to check cURL version.
 // echo "<pre>";
 // if (function_exists('curl_version')) var_dump(curl_version());

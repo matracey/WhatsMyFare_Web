@@ -42,6 +42,8 @@ function updateDisplayedFare(field)
 	};
 }
 
+
+
 $(document).ready(function()
 {
 	// console.log("Hello");
@@ -52,12 +54,6 @@ $(document).ready(function()
 	setupHideRadio('service');
 	setupHideRadio('bracket');
 	setupHideRadio('journey');
-
-	// var input = $("input:radio");
-	// input.click(function()
-	// {
-	// 	alert(input.attr("id"));
-	// });
 
 	$('#adultDiv').addClass('bracket_selected');
 	$('#singleDiv').addClass('journey_selected');
