@@ -80,7 +80,7 @@ class resultSet
 		$destinationServiceID = (int)$this->destination['service_id'];
 		if ($service == 'luas')
 		{
-			if ($originServiceID !== $destinationServiceID) //($originServiceID === 1 and $destinationServiceID === 2) or ($originServiceID === 2 and $destinationServiceID === 1)
+			if ($originServiceID !== $destinationServiceID)
 			{
 				$service = 'both';
 			}else $service = $this->stopServicesEnum[$originServiceID];

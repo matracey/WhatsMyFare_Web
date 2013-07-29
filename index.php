@@ -1,27 +1,31 @@
 <?php
+require_once 'inc/fare_functions.php';
 
-$urlBody = "http://whats-my-fare-ie.elasticbeanstalk.com/private/api/MzM5ODM2MzI=/";
+// $urlBody = "http://whats-my-fare-ie.elasticbeanstalk.com/private/api/MzM5ODM2MzI=/";
+$urlBody = "http://localhost/~martintracey/whats_my_fare_web/private/api/MzM5ODM2MzI=/";
 $url = $urlBody . "addConnectionLog";
-$fields = array('ip' => $_SERVER['REMOTE_ADDR']);
-foreach($fields as $key=>$value) { $fields_string .= $key.'='.$value.'&'; }
-rtrim($fields_string, '&');
+$fields = array();
+$fields['ip'] = $_SERVER['REMOTE_ADDR'];
+if(!isset($fields['ip'])) $fields['ip'] = "0.0.0.0";
 
-// Old SERVER SIDE code that recorded the IP in the database.
-// $ch = curl_init();
+curl_post($url, $fields);
 
-// curl_setopt($ch,CURLOPT_URL, $url);
-// curl_setopt($ch,CURLOPT_POST, count($fields));
-// curl_setopt($ch,CURLOPT_POSTFIELDS, $fields_string);
-// curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+/*
+ * CHECK IS SITE ACTIVE
+ * If site isn't active, we'll load the contents of the site_inactive.html file.
+ * Once that's loaded, we'll exit.
+ * 
+ * Otherwise, we'll continue as normal.
+ */
+$url = $urlBody . "siteStatus";
+$result = curl_get($url);
+$siteStatus = $result['value'];
+if($siteStatus == 0 and isLiveSite())
+{
+	include 'inc/closed.php';
+	exit();
+}
 
-// $connectionlog_result = curl_exec($ch);
-// curl_close($ch);
-
-// Uncomment to check cURL version.
-// echo "<pre>";
-// if (function_exists('curl_version')) var_dump(curl_version());
-// echo "</pre>";
-// exit();
 include 'inc/header.php';
 $errorMessages = array(
 	'There was a problem with the origin that you entered. Please try again.',
