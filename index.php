@@ -2,7 +2,7 @@
 require_once 'inc/fare_functions.php';
 
 // $urlBody = "http://whats-my-fare-ie.elasticbeanstalk.com/private/api/MzM5ODM2MzI=/";
-$urlBody = "http://localhost/~martintracey/whats_my_fare_web/private/api/MzM5ODM2MzI=/";
+$urlBody = "http://whatsmyfare.ie/private/api/private/api/MzM5ODM2MzI=/";
 $url = $urlBody . "addConnectionLog";
 $fields = array();
 $fields['ip'] = $_SERVER['REMOTE_ADDR'];

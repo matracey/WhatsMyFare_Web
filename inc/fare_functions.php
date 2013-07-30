@@ -53,8 +53,8 @@ function isLiveSite()
 	$params = array();
 	$parts = explode('/', $_SERVER['REQUEST_URI']);
 
-	// if($_SERVER['SERVER_NAME'] == "whatsmyfare.ie" or $_SERVER['SERVER_NAME'] == "www.whatsmyfare.ie")
-	if($_SERVER['SERVER_NAME'] == "whatsmyfare.ie" or $_SERVER['SERVER_NAME'] == "www.whatsmyfare.ie" or $_SERVER['SERVER_NAME'] == "whats-my-fare-ie.elasticbeanstalk.com")
+	if($_SERVER['SERVER_NAME'] == "whatsmyfare.ie" or $_SERVER['SERVER_NAME'] == "www.whatsmyfare.ie")
+	// if($_SERVER['SERVER_NAME'] == "whatsmyfare.ie" or $_SERVER['SERVER_NAME'] == "www.whatsmyfare.ie" or $_SERVER['SERVER_NAME'] == "whats-my-fare-ie.elasticbeanstalk.com")
 	{
 		return true;
 	}else return false;

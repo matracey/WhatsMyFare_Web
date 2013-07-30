@@ -51,7 +51,7 @@ class resultSet
 	public $cashReturnFare;
 	public $leapReturnFare;
 	
-	private $urlBody = "http://whats-my-fare-ie.elasticbeanstalk.com/private/api/MzM5ODM2MzI=/";
+	private $urlBody = "http://whatsmyfare.ie/private/api/MzM5ODM2MzI=/";
 
 	// Initialiser
 	public function __construct($stopFrom, $stopTo, $service, $bracket)
