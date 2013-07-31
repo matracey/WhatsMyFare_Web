@@ -1,8 +1,19 @@
 <?php
 require_once 'inc/fare_functions.php';
 
+// API URL - used for all API communication.
 // $urlBody = "http://whats-my-fare-ie.elasticbeanstalk.com/private/api/MzM5ODM2MzI=/";
 $urlBody = "http://whatsmyfare.ie/private/api/private/api/MzM5ODM2MzI=/";
+
+
+/*
+ * LOG IP OF CONNECTING USER
+ *
+ * 1. Generate API access url for adding connection log.
+ * 2. Add all required fields to the array.
+ * 3. POST the fields to the API URL.
+ */
+
 $url = $urlBody . "addConnectionLog";
 $fields = array();
 $fields['ip'] = $_SERVER['REMOTE_ADDR'];
@@ -17,6 +28,7 @@ curl_post($url, $fields);
  * 
  * Otherwise, we'll continue as normal.
  */
+
 $url = $urlBody . "siteStatus";
 $result = curl_get($url);
 $siteStatus = $result['value'];
@@ -64,10 +76,13 @@ $errorMessages = array(
 				</div>
 			</div>
 			<div class="capture_wrapper">
-				<input type="text" name="origin" id="origin" value="Start typing an origin..." />
+				<input type="text" class="userInput" name="origin" id="origin" value="Start typing an origin..." />
+				<ul id="results">
+				<!-- Search Results go here... -->
+				</ul>
 			</div>
 			<div class="capture_wrapper">
-				<input type="text" name="destin" id="destin" value="Start typing a destination..." />
+				<input type="text" class="userInput" name="destin" id="destin" value="Start typing a destination..." />
 			</div>
 			<div class="selection_wrapper">
 				<div class="bracket_selector" id="adultDiv">

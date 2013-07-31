@@ -12,7 +12,9 @@
 	</script>
 	<?php } ?>
 	<script type="text/javascript" src="js/jquery-2.0.2.js"></script>
+	<script type="text/javascript" src="js/jquery.activity-indicator-1.0.0.js"></script>
 	<script type="text/javascript" src="js/script.js"></script>
+
 </head>
 <body>
 <div class="header_wrapper">
