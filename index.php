@@ -77,12 +77,15 @@ $errorMessages = array(
 			</div>
 			<div class="capture_wrapper">
 				<input type="text" class="userInput" name="origin" id="origin" value="Start typing an origin..." />
-				<ul id="results">
+				<ul id="originResults" class="resultsList">
 				<!-- Search Results go here... -->
 				</ul>
 			</div>
 			<div class="capture_wrapper">
 				<input type="text" class="userInput" name="destin" id="destin" value="Start typing a destination..." />
+				<ul id="destinResults" class="resultsList">
+				<!-- Search Results go here... -->
+				</ul>
 			</div>
 			<div class="selection_wrapper">
 				<div class="bracket_selector" id="adultDiv">

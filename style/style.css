@@ -376,3 +376,55 @@ input
 	opacity:0.4;
 	filter:alpha(opacity=40); /* IE Support */
 }
+
+.capture_wrapper > input::-ms-clear {
+    /*display: none;*/
+    width: 0;
+    height: 0;
+}
+
+.resultsList
+{
+	list-style-type: none;
+	margin: 0 auto 1em auto;
+	padding: 0;
+	width: 567px;
+}
+
+a.link
+{
+	display: block;
+	width: 566px;
+	text-decoration: none;
+	padding: 10px 0;
+	border: 1px solid #c6c6c6;
+	border-top: 0;
+	background-color: #f0f0f0;
+	color: #000000;
+	font-family: Helvetica;
+	font-style: normal;
+	color: #000000;
+}
+
+.resultItem > a:hover
+{
+	background-color: #61438e;
+	color: #ffffff;
+}
+
+.resultItem
+{
+	/*padding: 10px 0;*/
+	/*border: 1px solid #c6c6c6;*/
+	/*border-top: 0;*/
+	background-color: #f0f0f0;
+	font-family: Helvetica;
+	font-style: normal;
+}
+
+.match
+{
+	font-weight: bold;
+	/*font-style: italic;*/
+	/*color: #111111;*/
+}

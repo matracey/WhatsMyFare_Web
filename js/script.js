@@ -9,7 +9,18 @@ function setupTextFields(fieldSelector)
 	 * TODO: Fix the fieldText variable -- we can't depend on textfield.val.
 	 */
 	var textField = $(fieldSelector);
-	var fieldText = textField.val();
+	var fieldText;
+
+	activeField = fieldSelector.replace("#", "")
+	switch(activeField)
+	{
+		case "origin":
+		fieldText = "Start typing an origin...";
+		break;
+		case "destin":
+		fieldText = "Start typing a destination...";
+		break;
+	}
 
 	textField.focus(function()
 	{
@@ -21,7 +32,7 @@ function setupTextFields(fieldSelector)
 		clearTimeout($.data (this, 'timer') ) // Storing arbitrary timer data on the textfield element.
 	    // Set Search String
 	    var search_string = $(this).val();
-	    var resultList = $('ul#results');
+	    var resultList = $('ul'+fieldSelector+'Results');
 
 	    // Do Search
 	    if(search_string == '' || search_string == fieldText)
@@ -32,6 +43,25 @@ function setupTextFields(fieldSelector)
 	    	var html = search(search_string);
 	    	// console.log("HTML: "+html);
 	    	resultList.html(html);
+
+	    	$('.link').bind('click',function(e)
+	        {
+	        	e.preventDefault();
+	        	// $(this).removeAttr('href');
+	        	id = $(this).attr('id');
+
+	        	for (var i = workingArray.length - 1; i >= 0; i--) {
+	        		if(workingArray[i]['id'] == id){
+	        			value = workingArray[i]['name'];
+	        		}
+	        	};
+
+	        	console.log(value);
+	        	textField.val(value);
+	        	resultList.fadeOut();
+	            return false;
+	        });
+
 	        $(this).data('timer', setTimeout(search, 100)) // Setting a timer of 100ms on the search method.
 	    }return false; 
 	});
@@ -45,25 +75,55 @@ function search(query)
     	var html = "";
     	var numResults = 5;
     	var lowQuer = "";
+    	var sortedArray = new Array();
+    	var sortedArrayCount = 0;
         if(typeof query != 'undefined') lowQuer = query.toLowerCase();
 
-        for (var i = workingArray.length - 1; i >= 0; i--)
+        try
         {
+        	workingArrayLength = workingArray.length;
+        }catch(e)
+        {
+        	workingArrayLength = 0;
+        }
+
+        for (var i = workingArrayLength - 1; i >= 0; i--)
+        {
+        	matchStart = 0;
+        	matchEnd = 0;
         	// console.log('Name: '+workingArray[i]['name']);
         	var lowName = workingArray[i]['name'].toLowerCase();
-        	if( lowName.indexOf(lowQuer) != -1 && numResults != 0)
+        	if( lowName.indexOf(lowQuer) != -1 )
         	{
         		name = workingArray[i]['name'];
         		
-        		leadingString = name.substr(0, lowName.indexOf(lowQuer));
-        		matchingString = name.substr(lowName.indexOf(lowQuer), query.length);
-        		trailingString = name.substr(lowName.indexOf(lowQuer)+query.length, name.length);
+        		matchStart = lowName.indexOf(lowQuer);
+        		matchEnd = matchStart+query.length;
+        		trailLen = name.length-matchEnd;
 
-        		boldHTML = "LEADING<span style='text-decoration:italic;'>BOLD</span>TRAILING";
+        		workingArray[i]['matchStart'] = matchStart;
+        		workingArray[i]['matchEnd'] = matchEnd;
+        		workingArray[i]['trailLen'] = trailLen;
+
+        		sortedArray[sortedArrayCount] = workingArray[i];
+        		sortedArrayCount++;
+        	}
+        }
+        // SORTED ARRAY CONTAINS ALL SEARCH RESULTS.
+        sortedArray.sort( function(a,b) { return (parseInt(b.matchStart) - parseInt(a.matchStart)) } );
+        for (var i = sortedArray.length - 1; i >= 0; i--) {
+        	console.log(sortedArray[i].matchStart+' '+sortedArray[i].name)
+        	if(numResults > 0){
+        		name = sortedArray[i]['name'];
+        		leadingString = name.substr(0, sortedArray[i]['matchStart']);
+        		matchingString = name.substr(sortedArray[i]['matchStart'], query.length);
+        		trailingString = name.substr(sortedArray[i]['matchEnd'], sortedArray[i]['trailLen']);
+
+        		boldHTML = "<li class=\"resultItem\" class='resultItem'><a class=\"link\" id='"+sortedArray[i]['id']+"'>LEADING<span class=\"match\">BOLD</span>TRAILING</a></li>";
         		boldHTML = boldHTML.replace("LEADING", leadingString);
         		boldHTML = boldHTML.replace("BOLD", matchingString);
         		boldHTML = boldHTML.replace("TRAILING", trailingString);
-        		html = html+"<li style=\"font-weight:normal;\" id='"+workingArray[i]['id']+"' class='resultItem'>"+boldHTML+"</li>";
+        		html = html+boldHTML;
         		numResults--;
         	}
         };
@@ -140,15 +200,25 @@ function getWorkingArray(serviceName)
 	return array;
 }
 
+function compare(a,b) {
+  if (a['matchStart'] < b['matchStart'])
+     return -1;
+  if (a['matchStart'] > b['matchStart'])
+    return 1;
+  return 0;
+}
+
 function getStops()
 {
 	jQuery.getJSON('private/api/MTQ1NjQzMTI4NA==/getAllActiveStops/', function(data)
 	{
 		$('form').activity(false);
 		disableForm(true);
+
 		stops = data;
 		workingArray = getWorkingArray("luas"); 
-
+		workingArray.sort(compare);
+		
 		// Text Field Click to clear
 		setupTextFields('#origin');
 		setupTextFields('#destin');
