@@ -56,7 +56,7 @@ function setupTextFields(fieldSelector)
 	        		}
 	        	};
 
-	        	console.log(value);
+	        	// console.log(value);
 	        	textField.val(value);
 	        	resultList.fadeOut();
 	            return false;
@@ -77,14 +77,17 @@ function search(query)
     	var lowQuer = "";
     	var sortedArray = new Array();
     	var sortedArrayCount = 0;
+
         if(typeof query != 'undefined') lowQuer = query.toLowerCase();
 
         try
         {
         	workingArrayLength = workingArray.length;
+        	queryLength = query.length;
         }catch(e)
         {
         	workingArrayLength = 0;
+        	queryLength = 0;
         }
 
         for (var i = workingArrayLength - 1; i >= 0; i--)
@@ -112,7 +115,7 @@ function search(query)
         // SORTED ARRAY CONTAINS ALL SEARCH RESULTS.
         sortedArray.sort( function(a,b) { return (parseInt(b.matchStart) - parseInt(a.matchStart)) } );
         for (var i = sortedArray.length - 1; i >= 0; i--) {
-        	console.log(sortedArray[i].matchStart+' '+sortedArray[i].name)
+        	// console.log(sortedArray[i].matchStart+' '+sortedArray[i].name)
         	if(numResults > 0){
         		name = sortedArray[i]['name'];
         		leadingString = name.substr(0, sortedArray[i]['matchStart']);
