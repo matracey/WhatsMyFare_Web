@@ -76,13 +76,13 @@ $errorMessages = array(
 				</div>
 			</div>
 			<div class="capture_wrapper">
-				<input type="text" class="userInput" name="origin" id="origin" value="Start typing an origin..." />
+				<input type="text" class="userInput" name="origin" id="origin" value="Start typing an origin..." autocomplete="off" />
 				<ul id="originResults" class="resultsList">
 				<!-- Search Results go here... -->
 				</ul>
 			</div>
 			<div class="capture_wrapper">
-				<input type="text" class="userInput" name="destin" id="destin" value="Start typing a destination..." />
+				<input type="text" class="userInput" name="destin" id="destin" value="Start typing a destination..." autocomplete="off" />
 				<ul id="destinResults" class="resultsList">
 				<!-- Search Results go here... -->
 				</ul>
