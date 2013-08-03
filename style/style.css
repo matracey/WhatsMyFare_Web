@@ -375,6 +375,7 @@ input
 {
 	opacity:0.4;
 	filter:alpha(opacity=40); /* IE Support */
+	cursor: default;
 }
 
 .capture_wrapper > input::-ms-clear {
@@ -412,19 +413,42 @@ a.link
 	color: #ffffff;
 }
 
-.resultItem
-{
-	/*padding: 10px 0;*/
-	/*border: 1px solid #c6c6c6;*/
-	/*border-top: 0;*/
-	background-color: #f0f0f0;
-	font-family: Helvetica;
-	font-style: normal;
-}
+.resultItem { background-color: #f0f0f0; }
 
 .match
 {
 	font-weight: bold;
-	/*font-style: italic;*/
-	/*color: #111111;*/
+}
+
+.socialImage
+{
+	display: inline-block;
+	width: 32px;
+	height: 32px;
+	background-size: 32px 32px;
+	background-repeat: no-repeat;
+
+}
+
+.socialLink
+{
+	display: block;
+	width: 120px;
+	height: 32px;
+	margin: 12px auto;
+	/*background-color: #f0f0f0;*/
+	vertical-align: middle;
+	text-align: center;
+}
+
+.socialText
+{
+	/*list-style-type: none;*/
+	/*display: inline-block;*/
+	/*height: 12px;*/
+	/*vertical-align: middle;*/
+	/*text-align: center;*/
+	margin: 0 12px;
+	margin-top: -20px;
+	/*padding: 12px 0;*/
 }

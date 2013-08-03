@@ -7,6 +7,11 @@ if (isset($_POST['submit']))
 
 	// var_dump($result->origin, $result->destination);
 
+	echo "<pre>";
+	var_dump($result);
+	echo "</pre>";
+	exit();
+
 	if ($result->origin === false or $result->destination === false)
 	{
 		$err = "Location: index.php?";

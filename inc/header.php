@@ -3,6 +3,8 @@
 <head>
 	<title>What's My Fare</title>
 	<link rel="stylesheet" type="text/css" href="style/style.css" />
+	<link rel="icon" type="image/png" href="./images/icon.png">
+	<!-- <link rel="icon" type="image/x-icon" href="./images/icon.ico"> -->
 	<?php if(isset($pageID) and $pageID === 'result'){ ?>
 	<script type="text/javascript">
 	var cashSingle = <?php echo $result->cashSingleFare; ?>;

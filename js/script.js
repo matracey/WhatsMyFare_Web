@@ -35,7 +35,7 @@ function setupTextFields(fieldSelector)
 	    var resultList = $('ul'+fieldSelector+'Results');
 
 	    // Do Search
-	    if(search_string == '' || search_string == fieldText)
+	    if(search_string == '' || search_string == ' ' || search_string == fieldText)
 	    {
 	    	resultList.fadeOut();
 	    }else{
@@ -44,7 +44,7 @@ function setupTextFields(fieldSelector)
 	    	// console.log("HTML: "+html);
 	    	resultList.html(html);
 
-	    	$('.link').bind('click',function(e)
+	    	$('.link').click(function(e)
 	        {
 	        	e.preventDefault();
 	        	// $(this).removeAttr('href');
@@ -240,12 +240,22 @@ function disableForm(enable){
 	}
 }
 
+function setSocialIcon(id)
+{
+	$('.socialLink > #'+id).css('background-image', 'url(\'images/soc-'+id+'.png\')');
+	console.log ( id+" background-image = "+$('.socialLinks > #'+id).css('background-image') );
+}
+
 $(document).ready(function()
 {
 	$('form').activity();
 	disableForm();
 	getStops();
 	
+	setSocialIcon('fb'); // Facebook
+	setSocialIcon('tw'); // Twitter
+	setSocialIcon('ig'); // Instagram
+
 	setupHideRadio('service');
 	setupHideRadio('bracket');
 	setupHideRadio('journey');
