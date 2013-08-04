@@ -5,13 +5,6 @@ if (isset($_POST['submit']))
 {
 	$result = new resultSet($_POST['origin'],$_POST['destin'],$_POST['service'],$_POST['bracket']);
 
-	// var_dump($result->origin, $result->destination);
-
-	echo "<pre>";
-	var_dump($result);
-	echo "</pre>";
-	exit();
-
 	if ($result->origin === false or $result->destination === false)
 	{
 		$err = "Location: index.php?";

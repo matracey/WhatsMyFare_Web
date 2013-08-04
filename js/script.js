@@ -204,16 +204,28 @@ function getWorkingArray(serviceName)
 }
 
 function compare(a,b) {
-  if (a['matchStart'] < b['matchStart'])
-     return -1;
-  if (a['matchStart'] > b['matchStart'])
-    return 1;
-  return 0;
+	/*
+	 * This function is called when the array of stops is being sorted.
+	 * If a minus value is returned, then a should go before b.
+	 * If a plus value is returned, a should go after b.
+	 * if 0 is returned, then a and b are equal!
+	 */
+	
+	if (a['matchStart'] < b['matchStart']) return -1;
+	if (a['matchStart'] > b['matchStart']) return 1;
+	return 0;
 }
 
 function getStops()
 {
-	jQuery.getJSON('private/api/MTQ1NjQzMTI4NA==/getAllActiveStops/', function(data)
+	/*
+	 * This function will retrieve all active stops via AJAX from the API.
+	 * There should be code in place to handle unexpected responses from the API.
+	 * At the moment, when the API can't connect to the database, the query never
+	 * stops running.
+	 */
+
+	jQuery.getJSON('./private/api/MTQ1NjQzMTI4NA==/getAllActiveStops/', function(data)
 	{
 		$('form').activity(false);
 		disableForm(true);

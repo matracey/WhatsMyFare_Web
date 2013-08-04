@@ -2,6 +2,9 @@
 
 class resultSet
 {
+	const urlBody = "http://api.whatsmyfare.ie/MzM5ODM2MzI=/";
+	// const urlBody = "http://localhost/~martintracey/whats_my_fare_web/private/api/MzM5ODM2MzI=/";
+
 	// Temporary variables
 	private $services = array(
 		'red' => array('name'=>'Luas Red Line', 'img'=>'images/red.png', 'colour'=>'#aa3535'),
@@ -51,16 +54,14 @@ class resultSet
 	public $cashReturnFare;
 	public $leapReturnFare;
 	
-	private $urlBody = "http://whatsmyfare.ie/private/api/MzM5ODM2MzI=/";
-
 	// Initialiser
 	public function __construct($stopFrom, $stopTo, $service, $bracket)
 	{
 		// Set up the inital properties of the object.
-		$this->stopFrom = $stopFrom;
-		$this->stopTo = $stopTo;
-		$this->service = $service;
-		$this->bracket = $bracket;
+		$this->stopFrom	= rawurlencode($stopFrom);
+		$this->stopTo	= rawurlencode($stopTo);
+		$this->service	= $service;
+		$this->bracket	= $bracket;
 
 		$this->getDisplayedBracket();
 		$this->getDisplayedPoints();
@@ -94,7 +95,7 @@ class resultSet
 
 	private function getValuesForQuery($query)
 	{
-		$url = $this->urlBody . "getStopForService/name/". urlencode($query). "/type_id/". $this->selectedServicesEnum[$this->service];
+		$url = resultSet::urlBody . "getStopForService/name/". $query. "/type_id/". $this->selectedServicesEnum[$this->service];
 		$handle = curl_init();
 		curl_setopt_array($handle, 
 			array(
@@ -138,10 +139,10 @@ class resultSet
 	{
 		// STEP 2: Get the Fare Price Code for the displayed Stops
 		// This method should obtain the FARE VALUES ( in cash and leap card ) for both single and return journies.
-		$originID = urlencode($this->origin['id']);
-		$destinID = urlencode($this->destination['id']);
+		$originID = rawurlencode($this->origin['id']);
+		$destinID = rawurlencode($this->destination['id']);
 
-		$url = $this->urlBody . "getFareForStops/from/" . $originID . "/to/" . $destinID;
+		$url = resultSet::urlBody . "getFareForStops/from/" . $originID . "/to/" . $destinID;
 		$handle = curl_init();
 		curl_setopt_array($handle, 
 			array(
@@ -168,7 +169,7 @@ class resultSet
 		{
 			return false;
 		}
-		$url = $this->urlBody . "getActivePriceForCode/code/". urlencode($this->priceCode);
+		$url = resultSet::urlBody . "getActivePriceForCode/code/". rawurlencode($this->priceCode);
 		$handle = curl_init();
 		curl_setopt_array($handle, 
 			array(
@@ -183,12 +184,6 @@ class resultSet
 		$array = json_decode($response, true);
 		if( isset($array) and !empty($array) and (count($array) === 1) ) $array = $array[0];
 		else return false;
-
-		// echo 'Code: '.$this->priceCode;
-		// echo "<pre>";
-		// var_dump($array);
-		// echo "</pre>";
-		// exit();
 
 		$this->cashSingleFare = $array[$this->bracket . '_single_cash'];
 		$this->leapSingleFare = $array[$this->bracket . '_single_leap'];
