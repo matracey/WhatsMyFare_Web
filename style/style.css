@@ -452,3 +452,30 @@ a.link
 	margin-top: -20px;
 	/*padding: 12px 0;*/
 }
+
+.redTextField
+{
+	background-image: url(images/red.png);
+	background-size: 6%;
+	background-repeat: no-repeat;
+	padding-left: 40px;
+	width: 515px;
+}
+
+.greenTextField
+{
+	background-image: url(images/green.png);
+	background-size: 6%;
+	background-repeat: no-repeat;
+	padding-left: 40px;
+	width: 515px;
+}
+
+.railTextField
+{
+	background-image: url(images/rail.png);
+	background-size: 6%;
+	background-repeat: no-repeat;
+	padding-left: 40px;
+	width: 515px;
+}
