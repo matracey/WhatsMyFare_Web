@@ -40,25 +40,21 @@ if($siteStatus == 0 and isLiveSite())
 
 include 'inc/header.php';
 $errorMessages = array(
-	'There was a problem with the origin that you entered. Please try again.',
-	'There was a problem with the destination that you entered. Please try again.',
-	'There was a problem with the origin and destination that you entered. Please try again.'
+	101 => 'There was a problem with the origin that you entered. Please try again.',
+	102 => 'There was a problem with the destination that you entered. Please try again.',
+	100 => 'There was a problem with the origin and destination that you entered. Please try again.'
 	);
 
 ?>
 	<div class="dynamic_body">
-	<?php if( isset($_GET['or']) or isset($_GET['de']) ) {?><div class="error_message"><p class="error"><?php
-	if (isset($_GET['or']) and isset($_GET['de']))
-	{
-		echo $errorMessages[2];
-	}else if (isset($_GET['or']))
-	{
-		echo $errorMessages[0];
-	}else if (isset($_GET['de']))
-	{
-		echo $errorMessages[1];
-	}
-	?></p></div><?php }?>
+	<?php if( isset($_GET['error']) ) {?>
+		<div class="error_message"><p class="error">
+		<?php
+		$error_code = intval($_GET['error']);
+		if($error_code != 0) echo $errorMessages[$error_code];
+		else echo 'Sorry, but something went wrong. Please try again.';
+		?></p></div>
+	<?php }?>
 		<form action="get_result.php" method="post">
 		<div class="form_wrapper">
 			<div class="selection_wrapper">

@@ -8,9 +8,13 @@ if (isset($_POST['submit']))
 	if ($result->origin === false or $result->destination === false)
 	{
 		$err = "Location: index.php?";
-		if($result->origin === false) $err .= "or=0&";
-		if($result->destination === false) $err .= "de=0&";
-		rtrim($err, "&");
+		if( $result->origin === false and $result->destination === false )
+		{
+			$err .= "error=100";
+		}
+		else if($result->origin === false) $err .= "error=101";
+		else if($result->destination === false) $err .= "error=102";
+		// rtrim($err, "&");
 		header($err);
 		exit();
 	}
